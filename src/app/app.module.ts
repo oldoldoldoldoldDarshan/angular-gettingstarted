@@ -8,7 +8,11 @@ import { ProductListComponent } from './products/product-list.component';
 import { ConvertToSpace } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star.component';
 import {HttpClientModule } from '@angular/common/http';
-import { VideoComponent } from './video/video.component'
+import { VideoComponent } from './video/video.component';
+import { ProductDetailComponent } from './products/product-detail.component'
+import { WelcomeComponent } from './home/welcome.component';
+import {RouterModule} from '@angular/router'
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,18 @@ import { VideoComponent } from './video/video.component'
     ProductListComponent,
     ConvertToSpace,
     StarComponent,
-    VideoComponent
+    VideoComponent,
+    ProductDetailComponent,
+    WelcomeComponent   
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatVideoModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })

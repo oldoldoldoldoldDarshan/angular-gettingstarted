@@ -39,7 +39,6 @@ export class ProductService {
     }
 
     // examples of using error handling
-
     public abs: Observable<String> = from(['darshan', 'yadav', 'venkatesh']).pipe(
         tap(data => console.log(JSON.stringify(data))),
         map( (v:string) => {
@@ -56,14 +55,11 @@ export class ProductService {
                 //return of('return obsorvable'); // -> returns an obsorvable
                 return of(null); // -> returns an obsorvable
            }
-           return of('not a string problem');
+           return of('not a string problem'); // -> returns Obsorvable
         })
     );
 
 
-    private throwOnFirstTry(data) {
-
-    }
     
     // error handling mehtod should return error statused observable or new obesrvable otherwise there will be an error.
     private handleError(err: HttpErrorResponse, obs: Observable<any>): Observable<any> {

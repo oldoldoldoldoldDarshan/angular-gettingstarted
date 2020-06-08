@@ -44,7 +44,11 @@
                      [style.height.px] = 'imageHeight'
                      >
                 </td>
-            <td>{{darshan.productName }}</td>
+            <td>
+                <a [routerLink] = "['/products', darshan.productId]">
+                    {{darshan.productName }}
+                </a>
+                </td>
             <td>{{darshan.productCode | lowercase | convertToSpace: '-'}}</td>
             <td>{{darshan.releaseDate}}</td>
             <td>{{darshan.price | currency:'INR':'symbol':'1.2-3' }}</td>
